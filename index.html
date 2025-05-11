@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Three.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<!-- OrbitControls for mouse interaction -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/controls/OrbitControls.min.js"></script>
+
+  <title>Sheet metal update</title>
+ 
+</head>
+<body>
+  <div class="container">
+    <h2>Draw Shape</h2>
+    <select id="shapeSelect">
+      <option value="rectangle">Rectangle</option>
+      <option value="circle">Circle</option>
+      <option value="pentagon">Pentagon</option>
+    </select>
+    <input type="number" id="width" placeholder="Width (mm)" />
+    <input type="number" id="height" placeholder="Height (mm)" />
+    <button id="drawBtn">Draw Shape</button>
+
+    <div class="canvas-wrapper">
+   <canvas id="designCanvas" width="800" height="600"></canvas>
+</div>
+
+    <h3>Add Fold Line</h3>
+    <input type="number" id="foldPos" placeholder="Position (mm)" />
+    <select id="foldDir">
+      <option value="vertical">Vertical</option>
+      <option value="horizontal">Horizontal</option>
+    </select>
+    <button id="addFold">Add Fold</button>
+    <button id="clearFolds">Clear Folds</button>
+  </div>
+<div class="center-wrapper">
+  <h3>3D Preview</h3>
+  <div id="preview3d-container">
+    <div id="shape3d"></div>
+  </div>
+</div>
+
+  <div class="download-buttons">
+    <button onclick="downloadPNG()">Download PNG</button>
+  <button onclick="downloadSVG()">Download SVG</button>
+<button onclick="saveDesignToLocalStorage()">Save Design</button>
+<button onclick="loadDesignFromLocalStorage()">Load Design</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+

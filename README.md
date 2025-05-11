@@ -9,7 +9,9 @@ plaintext
 Copy
 Edit
 ├── index.html       # Main HTML page
+
 ├── style.css        # CSS for layout and styling (not provided here)
+
 └── script.js        # Main JavaScript logic for drawing and 3D rendering
 
  Features
